@@ -40,18 +40,6 @@ def generate_reply(user_input):
         logger.error(f"OpenAI API error: {e}")
         return "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
 
-response = client.chat.completions.create(  # <== Problemstelle
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": user_input}
-    ],
-    temperature=0.85,
-    max_tokens=300,
-)
-
-print("✅ Antwort erhalten:", response)
-
 
 def generate_reply_with_context(user_input, conversation_history=None):
     """
