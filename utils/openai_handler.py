@@ -14,9 +14,31 @@ SYSTEM_PROMPT = (
 )
 
 def generate_reply(user_input):
-   print("🔍 GPT wird aufgerufen – Prompt:")
-print(user_input)
-print("🔐 API-Key geladen:", os.getenv("OPENAI_API_KEY")[:8], "...")
+    try:
+        logger.info(f"Generating GPT response for input: {user_input[:50]}...")
+        
+        # Debug-Ausgaben direkt vor der Anfrage
+        print("🔍 GPT wird aufgerufen – Prompt:")
+        print(user_input)
+        print("🔐 API-Key geladen:", os.getenv("OPENAI_API_KEY")[:8], "...")
+
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.85,
+            max_tokens=300,
+        )
+
+        reply = response.choices[0].message.content.strip()
+        logger.info(f"GPT response generated successfully: {reply[:50]}...")
+        return reply
+
+    except Exception as e:
+        logger.error(f"OpenAI API error: {e}")
+        return "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
 
 response = client.chat.completions.create(  # <== Problemstelle
     model="gpt-3.5-turbo",
