@@ -1,0 +1,36 @@
+{
+  "6546178150": {
+    "user_id": 6546178150,
+    "first_seen": "2025-07-17T11:28:51.643506",
+    "last_activity": "2025-07-17 12:02:24.775474",
+    "message_count": 3,
+    "topics_discussed": [],
+    "mood": "neutral",
+    "conversation_history": [
+      {
+        "role": "user",
+        "content": "Hey"
+      },
+      {
+        "role": "assistant",
+        "content": "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
+      },
+      {
+        "role": "user",
+        "content": "Hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
+      },
+      {
+        "role": "user",
+        "content": "Test"
+      },
+      {
+        "role": "assistant",
+        "content": "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
+      }
+    ]
+  }
+}

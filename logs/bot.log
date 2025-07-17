@@ -1,0 +1,89 @@
+2025-07-17 11:26:16 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:26:16 - utils.logging_config - INFO - Baily Bot logging initialized at 2025-07-17 11:26:16
+2025-07-17 11:26:16 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:26:16 - data.conversation_states - INFO - No existing conversation states found, starting fresh
+2025-07-17 11:26:16 - __main__ - INFO - Starting Baily Bot...
+2025-07-17 11:26:16 - __main__ - INFO - Bot handlers registered successfully
+2025-07-17 11:26:47 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:26:47 - utils.logging_config - INFO - Baily Bot logging initialized at 2025-07-17 11:26:47
+2025-07-17 11:26:47 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:26:47 - data.conversation_states - INFO - No existing conversation states found, starting fresh
+2025-07-17 11:26:47 - __main__ - INFO - Starting Baily Bot...
+2025-07-17 11:26:47 - __main__ - INFO - Bot handlers registered successfully
+2025-07-17 11:27:42 - handlers.commands - INFO - User 6546178150 (BailyTheMuse) started the bot
+2025-07-17 11:27:47 - handlers.commands - INFO - Help command used by user 6546178150
+2025-07-17 11:27:53 - handlers.commands - INFO - Whoami command used by user 6546178150
+2025-07-17 11:28:02 - handlers.admin - INFO - Status command executed by admin 6546178150
+2025-07-17 11:28:12 - handlers.admin - INFO - Admin panel accessed by user 6546178150
+2025-07-17 11:28:15 - handlers.admin - INFO - Admin panel accessed by user 6546178150
+2025-07-17 11:28:51 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Wie geht's dir
+2025-07-17 11:28:57 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Keine Ahnung
+2025-07-17 11:31:31 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Test
+2025-07-17 11:33:42 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:33:42 - utils.logging_config - INFO - Baily Bot logging initialized at 2025-07-17 11:33:42
+2025-07-17 11:33:42 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:33:42 - data.conversation_states - INFO - Loaded 1 conversation states
+2025-07-17 11:33:42 - __main__ - INFO - Starting Baily Bot...
+2025-07-17 11:33:42 - web_server - INFO - Starting Flask keep-alive server on port 8080
+2025-07-17 11:33:42 - web_server - INFO - Flask keep-alive server started successfully
+2025-07-17 11:33:42 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.116:8080
+2025-07-17 11:33:42 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-17 11:33:42 - __main__ - INFO - Bot handlers registered successfully
+2025-07-17 11:33:43 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 11:33:43] "GET / HTTP/1.1" 200 -
+2025-07-17 11:33:53 - werkzeug - INFO - 127.0.0.1 - - [17/Jul/2025 11:33:53] "GET / HTTP/1.1" 200 -
+2025-07-17 11:33:56 - werkzeug - INFO - 127.0.0.1 - - [17/Jul/2025 11:33:56] "GET /health HTTP/1.1" 200 -
+2025-07-17 11:41:09 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Hey
+2025-07-17 11:41:15 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Gut und dir?
+2025-07-17 11:53:28 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:53:28 - utils.logging_config - INFO - Baily Bot logging initialized at 2025-07-17 11:53:28
+2025-07-17 11:53:28 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:53:28 - data.conversation_states - INFO - Loaded 1 conversation states
+2025-07-17 11:53:28 - __main__ - INFO - Starting Baily Bot...
+2025-07-17 11:53:28 - web_server - INFO - Starting Flask keep-alive server on port 8080
+2025-07-17 11:53:28 - web_server - INFO - Flask keep-alive server started successfully
+2025-07-17 11:53:28 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.116:8080
+2025-07-17 11:53:28 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-17 11:53:28 - __main__ - INFO - Bot handlers registered successfully
+2025-07-17 11:53:29 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 11:53:29] "GET / HTTP/1.1" 200 -
+2025-07-17 11:54:05 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:54:05 - utils.logging_config - INFO - Baily Bot logging initialized at 2025-07-17 11:54:05
+2025-07-17 11:54:05 - utils.logging_config - INFO - ==================================================
+2025-07-17 11:54:05 - data.conversation_states - INFO - Loaded 1 conversation states
+2025-07-17 11:54:05 - __main__ - INFO - Starting Baily Bot...
+2025-07-17 11:54:05 - web_server - INFO - Starting Flask keep-alive server on port 8080
+2025-07-17 11:54:05 - web_server - INFO - Flask keep-alive server started successfully
+2025-07-17 11:54:06 - __main__ - INFO - Bot handlers registered successfully
+2025-07-17 11:54:06 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.128.116:8080
+2025-07-17 11:54:06 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-17 11:54:06 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 11:54:06] "GET / HTTP/1.1" 200 -
+2025-07-17 11:54:46 - werkzeug - INFO - 127.0.0.1 - - [17/Jul/2025 11:54:46] "GET /health HTTP/1.1" 200 -
+2025-07-17 11:54:50 - werkzeug - INFO - 127.0.0.1 - - [17/Jul/2025 11:54:50] "GET /health HTTP/1.1" 200 -
+2025-07-17 11:55:40 - data.conversation_states - INFO - Reset conversation state for user 6546178150
+2025-07-17 11:55:41 - handlers.conversations - INFO - User 6546178150 reset conversation state
+2025-07-17 11:55:44 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Hey
+2025-07-17 11:55:44 - utils.openai_handler - INFO - Generating GPT response with context for: Hey...
+2025-07-17 11:55:45 - openai._base_client - INFO - Retrying request to /chat/completions in 0.459955 seconds
+2025-07-17 11:55:46 - openai._base_client - INFO - Retrying request to /chat/completions in 0.822920 seconds
+2025-07-17 11:55:47 - utils.openai_handler - ERROR - OpenAI API error with context: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-07-17 11:55:52 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Hi
+2025-07-17 11:55:52 - utils.openai_handler - INFO - Generating GPT response with context for: Hi...
+2025-07-17 11:55:52 - openai._base_client - INFO - Retrying request to /chat/completions in 0.457028 seconds
+2025-07-17 11:55:53 - openai._base_client - INFO - Retrying request to /chat/completions in 0.935652 seconds
+2025-07-17 11:55:54 - utils.openai_handler - ERROR - OpenAI API error with context: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-07-17 11:58:16 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 11:58:16] "GET / HTTP/1.1" 200 -
+2025-07-17 12:00:55 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 12:00:55] "GET / HTTP/1.1" 200 -
+2025-07-17 12:02:24 - handlers.conversations - INFO - User 6546178150 (BailyTheMuse): Test
+2025-07-17 12:02:24 - utils.openai_handler - INFO - Generating GPT response with context for: Test...
+2025-07-17 12:02:24 - openai._base_client - INFO - Retrying request to /chat/completions in 0.384546 seconds
+2025-07-17 12:02:25 - openai._base_client - INFO - Retrying request to /chat/completions in 0.996469 seconds
+2025-07-17 12:02:27 - utils.openai_handler - ERROR - OpenAI API error with context: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-07-17 12:04:46 - werkzeug - INFO - 172.31.128.116 - - [17/Jul/2025 12:04:46] "GET / HTTP/1.1" 200 -
