@@ -42,7 +42,7 @@ def generate_reply(user_input):
         
     except Exception as e:
         logger.error(f"OpenAI API error: {e}")
-        return "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme."
+        return "Ups, da ist was schiefgelaufen 😅 Meine AI-Verbindung macht gerade Probleme1."
 
 def generate_reply_with_context(user_input, conversation_history=None):
     """
