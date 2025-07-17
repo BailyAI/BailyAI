@@ -14,8 +14,9 @@ SYSTEM_PROMPT = (
 )
 
 def generate_reply(user_input):
-    print("🔍 API-Key geladen:", os.getenv("OPENAI_API_KEY")[:10])  # Teil-Key anzeigen
-print("📨 Sende Anfrage an OpenAI:", user_input)
+   print("🔍 GPT wird aufgerufen – Prompt:")
+print(user_input)
+print("🔐 API-Key geladen:", os.getenv("OPENAI_API_KEY")[:8], "...")
 
 response = client.chat.completions.create(  # <== Problemstelle
     model="gpt-3.5-turbo",
