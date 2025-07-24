@@ -15,5 +15,5 @@ ENABLE_OPENAI = False  # falls du OpenAI endgültig ersetzt hast
 ENABLE_ADMIN_FEATURES = True  # <-- Das ist die fehlende Zeile!
 
 LOG_LEVEL = "INFO"
-LOG_FILE = "logs/bot.log"
+LOG_FILE = "bot.log"
 ENABLE_LOGGING = True
