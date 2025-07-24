@@ -12,4 +12,4 @@ ADMIN_ID = int(os.getenv("ADMIN_ID") or 123456789)
 
 # Neue Flags für Steuerung
 ENABLE_CONVERSATION_MODE = True
-ENABLE_OPENAI = true  # Gemini statt OpenAI verwenden
+ENABLE_OPENAI = True  # Gemini statt OpenAI verwenden
