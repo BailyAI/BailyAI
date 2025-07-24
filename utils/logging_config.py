@@ -19,6 +19,7 @@ def setup_logging():
     
     # Set up file handler
     log_file_path = os.path.join(log_dir, LOG_FILE)
+    os.makedirs(os.path.dirname(log_file_path), exist_ok=True) 
     file_handler = logging.FileHandler(log_file_path, encoding='utf-8')
     file_handler.setFormatter(logging.Formatter(log_format, date_format))
     
