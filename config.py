@@ -10,6 +10,6 @@ if not BOT_TOKEN:
 
 ADMIN_ID = int(os.getenv("ADMIN_ID") or 123456789)
 
-# Neue Flags für Steuerung
 ENABLE_CONVERSATION_MODE = True
-ENABLE_OPENAI = True  # Gemini statt OpenAI verwenden
+ENABLE_OPENAI = False  # falls du OpenAI endgültig ersetzt hast
+ENABLE_ADMIN_FEATURES = True  # <-- Das ist die fehlende Zeile!
