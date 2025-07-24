@@ -13,3 +13,7 @@ ADMIN_ID = int(os.getenv("ADMIN_ID") or 123456789)
 ENABLE_CONVERSATION_MODE = True
 ENABLE_OPENAI = False  # falls du OpenAI endgültig ersetzt hast
 ENABLE_ADMIN_FEATURES = True  # <-- Das ist die fehlende Zeile!
+
+LOG_LEVEL = "INFO"
+LOG_FILE = "logs/bot.log"
+ENABLE_LOGGING = True
