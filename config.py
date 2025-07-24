@@ -4,6 +4,12 @@ BOT_NAME = "Baily"
 BOT_VERSION = "1.0"
 BOT_DESCRIPTION = "Ich bin Baily – deine süße AI-Begleitung"
 
+
+# Falls noch nicht vorhanden
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise ValueError("❌ GEMINI_API_KEY fehlt! Bitte im Environment setzen.")
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("❌ BOT_TOKEN fehlt! Bitte im Render Environment setzen.")
@@ -17,3 +23,5 @@ ENABLE_ADMIN_FEATURES = True  # <-- Das ist die fehlende Zeile!
 LOG_LEVEL = "INFO"
 LOG_FILE = "bot.log"
 ENABLE_LOGGING = True
+
+
