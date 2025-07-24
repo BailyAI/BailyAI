@@ -5,7 +5,8 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from config import ENABLE_CONVERSATION_MODE, ENABLE_OPENAI
 from utils.responses import get_conversation_response, get_random_reaction
-from utils.openai_handler import generate_reply, generate_reply_with_context
+from utils.gemini_handler import generate_reply
+, generate_reply_with_context
 from data.conversation_states import conversation_state
 
 logger = logging.getLogger(__name__)
