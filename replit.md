@@ -1,122 +1,96 @@
-# Baily Bot - Telegram Bot Project
+# Baily Bot – Telegram Bot Project
 
 ## Overview
 
-This is a German-language Telegram bot named "Baily" built with Python using the python-telegram-bot library. The bot features conversational capabilities, admin controls, and persistent conversation state management. It's designed to be a friendly, interactive chat bot that can handle various types of user interactions in German.
+Dies ist ein deutschsprachiger Telegram-Bot namens **"Baily"**, entwickelt mit Python und der `python-telegram-bot`-Bibliothek. Der Bot bietet KI-gestützte Konversation, Admin-Steuerung und speichert den Gesprächsverlauf. Ziel ist es, eine charmante und interaktive Chat-Erfahrung zu bieten.
 
-**Current Status**: Bot is fully operational and running successfully with Flask web server integration for keep-alive functionality and OpenAI GPT integration for enhanced conversations.
+**Aktueller Status**: Der Bot ist funktionsfähig und verwendet einen Flask-Webserver für das Keep-Alive. Die KI-Logik basiert auf **Google Gemini API** – als kostenlose Alternative zu GPT.
+
+---
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- Sprachstil: Alltagstauglich, leicht verspielt
 
-## System Architecture
+---
 
-The bot follows a modular architecture with clear separation of concerns:
+## Systemarchitektur
 
-### Core Components
-- **Main Application** (`main.py`): Entry point that initializes the bot and sets up handlers
-- **Web Server** (`web_server.py`): Flask-based keep-alive server running on port 8080
-- **Configuration Management** (`config.py`): Centralized configuration with environment variable support
-- **Handler Modules**: Separate modules for different types of interactions
-- **Utility Modules**: Supporting functions for logging, responses, and data management
-- **Data Layer**: JSON-based conversation state persistence
+Der Bot nutzt ein modulares Design mit klarer Trennung von Zuständigkeiten.
 
-### Architecture Pattern
-The bot uses a command-handler pattern with the python-telegram-bot framework, providing:
-- Asynchronous message processing
-- Modular command handling
-- State management for conversations
-- Error handling and logging
+### Hauptkomponenten
 
-## Key Components
+- **Main Application** (`main.py`)  
+  Startpunkt, Initialisierung der Handlers
 
-### 1. Command Handlers (`handlers/commands.py`)
-- **Purpose**: Handle slash commands like `/start`, `/help`, `/whoami`
-- **Features**: Personalized greetings, help text generation, user information display
-- **Language**: All responses in German with emoji support
+- **Web Server** (`web_server.py`)  
+  Flask-basierter Keep-Alive-Server auf Port 8080
 
-### 2. Conversation Handler (`handlers/conversations.py`)
-- **Purpose**: Process regular text messages and maintain conversation context
-- **Features**: OpenAI GPT-powered responses, conversation state tracking, personality reactions
-- **AI Integration**: Uses GPT-3.5-turbo with custom personality system prompt
-- **State Management**: Tracks user activity, message counts, and conversation history
+- **Konfiguration** (`config.py`)  
+  Zentrale Umgebungsvariablen (z. B. `BOT_TOKEN`, `ADMIN_ID`)
 
-### 3. Admin Functions (`handlers/admin.py`)
-- **Purpose**: Administrative commands and system monitoring
-- **Features**: System status reporting, user statistics, broadcast messaging
-- **Security**: Admin-only access with user ID verification
+- **Handler-Module**  
+  Eigene Dateien für Commands, Nachrichten, Adminfunktionen
 
-### 4. Conversation State Management (`data/conversation_states.py`)
-- **Purpose**: Persist user conversation states between bot restarts
-- **Storage**: JSON file-based storage in `data/conversation_states.json`
-- **Features**: User activity tracking, message counting, state persistence
+- **Utilities**  
+  Zusatzfunktionen: Logging, AI-Kommunikation, Antworten
 
-### 5. Web Server (`web_server.py`)
-- **Purpose**: Keep-alive Flask web server to maintain bot availability
-- **Features**: Health check endpoint, status monitoring, daemon thread execution
-- **Endpoints**: 
-  - `/` - Returns "Baily Bot is alive 💖" (status 200)
-  - `/health` - Returns JSON health status
+- **Persistenz**  
+  Konversationsstatus wird in JSON gespeichert (`data/conversation_states.json`)
 
-### 6. OpenAI Integration (`utils/openai_handler.py`)
-- **Purpose**: Handle OpenAI API interactions for enhanced conversation responses
-- **Features**: GPT-3.5-turbo integration, conversation context management, fallback handling
-- **Personality**: Custom system prompt defining Baily's 25-year-old playful but confident character
+---
 
-### 7. Utility Functions
-- **Logging** (`utils/logging_config.py`): Structured logging with file and console output
-- **Responses** (`utils/responses.py`): Random greeting generation and help text formatting
+## KI-Integration
 
-## Data Flow
+### Neu: **Google Gemini API** (`utils/gemini_handler.py`)
 
-1. **Message Reception**: Telegram sends updates to the bot
-2. **Handler Routing**: Main application routes messages to appropriate handlers
-3. **State Retrieval**: Conversation state is loaded for the user
-4. **Processing**: Handler processes the message and generates response
-5. **State Update**: User state is updated and persisted
-6. **Response**: Bot sends formatted response back to user
+- **Funktion**: Beantwortung von Nutzereingaben mit Kontext
+- **Kontextspeicherung**: max. 10 letzte Nachrichten
+- **Persönlichkeit**: Flirtend, charmant, leicht dominant (definiert durch System-Prompt)
+- **Fallback**: Lokale Antwortlogik bei Fehlern
 
-### Message Processing Flow
-```
-Incoming Message → Handler Selection → State Loading → Response Generation → State Saving → Response Sending
-```
+---
 
-## External Dependencies
+## Module im Überblick
 
-### Core Dependencies
-- **python-telegram-bot**: Main framework for Telegram bot interaction
-- **flask**: Web server framework for keep-alive functionality
-- **openai**: OpenAI API client for GPT-powered conversations
-- **psutil**: System monitoring for admin status reports
-- **logging**: Built-in Python logging for debugging and monitoring
+### 1. `/handlers/commands.py`
 
-### File System Dependencies
-- **logs/**: Directory for log file storage
-- **data/**: Directory for conversation state persistence
-- **data/conversation_states.json**: User state storage file
+- `/start`, `/help`, `/whoami` u. a.
+- Personalisierte Begrüßungen mit Emojis
 
-## Deployment Strategy
+### 2. `/handlers/conversations.py`
 
-### Configuration Management
-- Environment variables for sensitive data (BOT_TOKEN, ADMIN_ID)
-- Fallback values in config.py for development
-- Feature flags for enabling/disabling functionality
+- Verarbeitet alle normalen Texte
+- Nutzt Gemini für intelligente Antworten
+- Verwalter des Gesprächszustands pro User
 
-### File Structure Requirements
-- Automatic directory creation for logs and data
-- JSON-based persistence for easy backup and migration
-- Modular imports for easy maintenance
+### 3. `/handlers/admin.py`
 
-### Security Features
-- Admin-only commands with user ID verification
-- Environment variable prioritization for tokens
-- Comprehensive error handling and logging
+- `/status`, `/admin`, `/broadcast`
+- Zugriff nur für `ADMIN_ID`
+- Ressourcenanzeige via `psutil`
 
-### Monitoring and Logging
-- Structured logging with timestamps and severity levels
-- System resource monitoring through psutil
-- User activity tracking and statistics
-- Error logging with user-friendly error messages
+### 4. `/data/conversation_states.py`
 
-The bot is designed to be easily deployable with minimal setup requirements, using file-based storage for simplicity while maintaining the flexibility to migrate to database storage if needed.
+- Speichert den Gesprächsverlauf als JSON
+- Erkennt User anhand ihrer Telegram-ID
+- Merkt letzte Aktivität, Nachrichtenzähler usw.
+
+### 5. `/utils/gemini_handler.py`
+
+- Sendet API-Anfragen an Gemini (statt OpenAI)
+- Zwei Hauptfunktionen:
+  - `generate_reply()`
+  - `generate_reply_with_context()`
+
+### 6. `/utils/logging_config.py`
+
+- Erstellt `logs/` Ordner bei Bedarf
+- Schreibt Logs mit Zeitstempel & Severity
+
+---
+
+## Datenfluss
+
+```plaintext
+Nachricht → Handler-Auswahl → Zustand laden → Antwort generieren → Zustand speichern → Antwort senden
