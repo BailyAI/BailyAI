@@ -8,4 +8,8 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("❌ BOT_TOKEN fehlt! Bitte im Render Environment setzen.")
 
-ADMIN_ID = int(os.getenv("ADMIN_ID") or 123456789)  # deine Telegram-ID
+ADMIN_ID = int(os.getenv("ADMIN_ID") or 123456789)
+
+# Neue Flags für Steuerung
+ENABLE_CONVERSATION_MODE = True
+ENABLE_OPENAI = False  # Gemini statt OpenAI verwenden
