@@ -1,3 +1,4 @@
 # Konfigurationsdatei für Baily
-BOT_TOKEN = "7664066988:AAHgjstUI8lX29LLjEK_7Gkch5qu6kOHtbA"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 ADMIN_ID = 6546178150
