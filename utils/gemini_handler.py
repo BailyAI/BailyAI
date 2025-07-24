@@ -17,7 +17,8 @@ def generate_reply(user_input):
     try:
         logger.info(f"Gemini Anfrage wird generiert für: {user_input[:50]}...")
         
-        model = genai.GenerativeModel("gemini-pro")
+  model = genai.GenerativeModel("gemini-1.5-flash")
+
 
         chat = model.start_chat(history=[
             {"role": "user", "parts": [SYSTEM_PROMPT]},
